@@ -1,4 +1,4 @@
-public class StrFun {
+public class Strfun {
     public static void main(String[] args) {
       //String 18 methods 
         String name="KarTHika";
