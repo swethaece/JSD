@@ -1,0 +1,106 @@
+CONTROL STATEMENT:
+
+Definition: condition based execution
+
+condition: a>34
+           mark>=50
+           m1>34 && m2>34 && m3>34
+           !(m>=35
+           name.equals("admin")&& pwd.equals("password@123)
+
+1)Simpe if
+
+  SYNTAX:
+        if(condition)
+        {
+           statements;
+        }
+        eg:
+        if(mark>34)
+        {
+          System.out.println("pass");
+        }
+  OUTPUT:pass
+
+2)if else statement
+
+   SYNTAX:
+         if(condition)
+         {
+            true statement;
+         }
+         else
+         {
+            false statement;
+         }
+         eg:
+         if(max>34)
+         {
+           System.out.println("pass");
+         }
+         else
+         {
+           System.out.println("fail");
+         }
+
+Program:
+
+   import java.util.Scanner;
+   public class Control{
+      public static void main(string[] args){
+      Scanner scan=new Scanner( System.in);
+      System.out.println( x: "Enter your mark:");
+      int mark = scan.nextInt();
+      if(mark>49)
+      {
+         System.out.println( x:"Result:pass");
+      }
+      else
+      {
+         System.out.println( x:"Result:fail");
+      }
+      scan.close();
+      }
+   }
+
+3)IF else if statement or else if ladder
+  --------------------------------------
+
+Definition: Infinite change
+
+SYNTAX:
+
+      if(condition1)
+      {
+        statement1;
+      }
+      else if(condition2)
+      {
+        statement2;
+      }
+      else if(condition3)
+      {
+        statement3;
+      }
+      ----------------
+      ----------------
+      else
+      {
+        else statement;
+      }
+
+4)nested if
+  ---------
+
+Definition: a if statement with in if statement
+
+SYNTAX:
+
+      if(condition)
+      {
+        if(condition)
+        {
+          statement
+        }
+      }
+           

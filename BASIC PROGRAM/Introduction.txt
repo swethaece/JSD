@@ -1,0 +1,40 @@
+INTRODUCTION:
+
+  *In 1991 first introduced by james goseling at Sun micro system.
+  *Java starting name:OAK Language
+  *in 1995 renamed "JAVA"
+  *java sales to "ORACLE" corporation
+  *jdk1.8 onwards maintain by oracle
+  *the cost of java : 2.5billion dollar
+  *Java is platform independent language.All OS supported
+  *java case sensitive language
+  ex:classname  : first letter should be caps
+     var,method : first letter should be small
+
+  ex: class Employee
+      {
+        int tamilMart;
+        String firstNAME;
+        void getDetails();
+      {
+         }
+      }
+  *java extension : .java
+  *java is a both compiler and interpreter
+  compiler   :whole program error checking
+  interpreter:line by line error checking
+
+  *compile command : javac filename.java
+   run command     : java classname
+  *java default datatye: String
+  *java joining operator/concatenation: +
+  *java oops partially supported
+  *java strongly type checked language
+  *int v=100;
+   float v2= 33-34;
+   char = '#';
+   String name= "gowthaman";
+  *java official website: wwww.oracle.com
+  *java is a open source software
+  
+  How to check in your system java installed or not ?  --------> command: java ----version

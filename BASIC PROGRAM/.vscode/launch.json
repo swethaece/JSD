@@ -1,0 +1,63 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "LeapYear",
+            "request": "launch",
+            "mainClass": "LeapYear",
+            "projectName": "fsd_d4c730b3"
+        },
+        {
+            "type": "java",
+            "name": "VoteEligible",
+            "request": "launch",
+            "mainClass": "VoteEligible",
+            "projectName": "fsd_d4c730b3"
+        },
+        {
+            "type": "java",
+            "name": "Greatestnum",
+            "request": "launch",
+            "mainClass": "Greatestnum",
+            "projectName": "fsd_d4c730b3"
+        },
+        {
+            "type": "java",
+            "name": "EvenOdd",
+            "request": "launch",
+            "mainClass": "EvenOdd",
+            "projectName": "fsd_d4c730b3"
+        },
+        {
+            "type": "java",
+            "name": "MathFun",
+            "request": "launch",
+            "mainClass": "MathFun",
+            "projectName": "fsd_d4c730b3"
+        },
+        {
+            "type": "java",
+            "name": "StrFun",
+            "request": "launch",
+            "mainClass": "StrFun",
+            "projectName": "fsd_d4c730b3"
+        },
+        {
+            "type": "java",
+            "name": "Customer",
+            "request": "launch",
+            "mainClass": "Customer",
+            "projectName": "fsd_d4c730b3"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        }
+    ]
+}

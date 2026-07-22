@@ -1,0 +1,187 @@
+JAVA DATA TYPE
+
+1)Numbers:
+*byte     1byte =8bits  =2^8  =256/2 (-128 to 127)
+*short    2bytes=16bits =2^16 =65536/2(-32768 to 32767)
+*int      4bytes=32bits =2^32 =4294967296/2(-2147483648 to 2147483647)
+*long     8bytes=64bits =2^64 =(-9223372036854775808 to 922337203685477807)
+
+2)Decimal:
+*float    4bytes=(8digits)
+*double   8bytes=(17digits)
+
+3)text:
+*char    1byte  char c '#'; char c='\n';
+*string  infinite string name = "swetha";
+
+4)true/false:
+*boolean 1bit  boolean v=true;  boolean v=12<12;
+
+Program 1:
+        class Operator
+       {
+         public static void main (String args[])
+       {
+         int a=5;
+         int b=0;
+         int c=a/b;
+         System.out.println(c);
+        }
+      }
+
+Output:
+     cannot divided by zero
+
+Program 2:
+        class Operator
+       {
+         public static void main (String args[])
+       {
+         int a=0;
+         int b=0;
+         int c=a/b;
+         System.out.println(c);
+        }
+      }
+
+Output:
+     undefined
+
+Program 3:
+        class Operator
+       {
+         public static void main (String args[])
+       {
+         int a=5;
+         int b=0;
+         int c=a/b;
+         System.out.println(c);
+        }
+      }
+
+Output:
+      0
+
+
+OPERATORS
+
+1)Arithmetic operator
+
+  +
+  -
+  *
+  /
+  %
+
+Program 1 :
+	class Operator
+     {
+       public static void main (String args[])
+     {
+       int a=11;
+       int b=3;
+       int c=a%b;
+       System.out.println(c);
+       System.out.println(6%3);
+       System.out.println(2%3);
+       System.out.println(2/3);
+      }
+    }
+Output:
+      2
+      0
+      2
+      0
+
+Program 2:
+
+     class Operator
+    {
+      public static void main (String args[])
+    {
+      int a=11;
+      int b=3;
+      int c=a+b*2;
+      System.out.println(c);
+         c=(a+b)*2;
+      System.out.println(c);
+         c=200-1+200;
+      System.out.println(c);
+     }
+    }
+Output:
+   17
+   28
+   399
+   
+2)Relational operator or comparison operator
+
+  <    -less than
+  <=   -less than and equal to
+  >    -greater than
+  >=   -greater than & equal to
+  ==   -
+  !=   - Not equal to
+note: Don't use string when compare
+
+Program:
+
+      class Operator
+    {
+       public static void main (String args[])
+    {
+       int a=11;
+       int b=11;
+       System.out.println(a<b);
+          boolean c=a>b;
+       System.out.println(c);
+          c=a>=b;
+       System.out.println(c);
+          c=a<=b;
+       System.out.println(c);
+          c=a==b;
+       System.out.println(c);
+          c=a!=b;
+       System.out.println(c);
+      }
+    }
+
+Output:
+  False
+  False
+  True
+  True
+  True
+  False
+
+3)Logical Operator
+
+  &&    -logical and  note: any one condition is false result will be false
+  ||    -logical or   note: any one condition is true result will  be true
+  !     -logical not  note: true means false ,false means true
+
+Program:
+
+  class Operator
+{
+  public static void main (String args[])
+ {
+  int m1=100;
+  int m2=100;
+  int m3=100;
+  int m4=100;
+  int m5=34;
+  boolean res = m1>34 && m2>34 && m3>34 && m4>34 && m5>34;
+  System.out.println("Result :" +res);
+  boolean res1 = m1>34 || m2>34 || m3>34 || m4>34 || m5>34;
+  System.out.println("Result :" +res1);
+  boolean res2 = !(m1>34 && m2>34 && m3>34 && m4>34 && m5>34);
+  System.out.println("Result :" +res2);
+  }
+}
+
+Output:
+  False
+  True
+  True
+  

@@ -1,0 +1,102 @@
+How to get value at Runtime/dynamic:?
+
+
+step 1:
+     header file import
+   
+     ex:
+      import java.util.scanner;
+STEP 2:
+     create object to Scanner class
+
+    ex:
+     Scanner scan=new Scanner(System.in);
+
+STEP 3:
+     
+     String data=scan.next();
+     String data=scan.nextline();
+
+     int mark=scan.nextInt();
+     float avg=scan.nextFloat();
+     double d=scan.nextDouble();
+     long l=scan.nextLong();
+     short s=scan.nextShort();
+     byte b=scan.nextByte();
+     boolean bo=scan.nextBoolean();
+     char c=scan.next().charAt(0);
+
+STEP 4:
+
+     scan.close();
+
+PROGRAM 1:
+
+     import java.util.Scanner;
+
+     class Runtime
+    {
+        public static void main (String args[])
+       {
+     Scanner scan=new Scanner(System.in);
+     System.out.print("Enter Your Name:");
+ //    String name=scan.next();
+     String name=scan.nextLine();
+ 
+
+     System.out.println("Your Name:"+name);
+     scan.close();
+     }
+  }
+
+OUTPUT:
+
+    Enter Your Name: swetha
+    Your Name      : swetha
+
+PROGRAM 2:
+----------
+import java.util.Scanner;
+class Customer
+{
+   public static void main(String args[])
+{
+   Scanner scan=new Scanner(System.in);
+   System.out.println("Enter customer name:");
+   String cname=scan.next();
+   System.out.println("Enter customer id:");
+   short cid=scan.nextShort();
+   System.out.println("Enter amount:");
+   int amt=scan.nextInt();
+   System.out.println("is account valid y/n:");
+   char av=scan.next().charAt(0);
+   System.out.println("Enter customer height");
+   float hei=scan.nextFloat();
+
+   System.out.println("customer id : "+cid);
+   System.out.println("customer name : "+cname);
+   System.out.println("fees : "+amt);
+   System.out.println("is account valid : "+av);
+   System.out.println("customer height : "+hei);
+   scan.close();
+ }
+}
+
+Output:
+ 
+    Enter customer name: 
+    swetha
+    Enter customer id:
+    1234
+    Enter amount:
+    3000
+    is account valid y/n:
+    y
+    Enter customer height:
+    5.5
+    customer id :1234
+    customer name :swetha
+    fees :3000
+    is account valid :y
+    customer height :5.5
+    

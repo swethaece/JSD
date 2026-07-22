@@ -1,0 +1,25 @@
+How to get value at runtime/Dynamic?
+------------------------------------
+
+STEP 1:
+       Header file import
+       eg: import java.util.Scanner;
+
+STEP 2:
+       Create object to scanner class
+       eg: Scanner scan=new scan(System.in);
+
+STEP 3:
+       String data    =scan.next();
+       String data    =scan.nextLine();
+       int Mart       =scan.nextInt();
+       float avg      =scan.nextFloat();
+       double d       =scan.nextDouble();
+       long l         =scan.nextLong();
+       short s        =scan.nextShort();
+       byte b         =scan.nextByte();
+       boolean bo     =scan.nextBoolean();
+       char c         =scan.next().charAt(0);
+
+STEP 4:
+       scan.close();
