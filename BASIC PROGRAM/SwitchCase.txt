@@ -1,0 +1,36 @@
+SWITCH CASE STATEMENT
+---------------------
+       Definition: expression based execution
+       expression ?   var   var+1   a+b/c   a*CASE
+
+SYNTAX:
+-------
+        switch(expression)
+        {
+            case value1:
+                          statement;
+                          break;
+            case value2:
+                          statetment;
+                          break;
+            case value3:
+                          statement;
+                          break;
+        ---------------------
+            default:
+                    default statement;
+        }  
+ex:
+        int k=1;
+        switch(k) ;
+        {
+            case 1:
+                   System.out.println("one");
+                   break;
+            case 2:
+                    System.out.println("two");
+            --------------------------------------------
+            default:
+            System.out.println("default");
+
+        }

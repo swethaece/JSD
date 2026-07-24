@@ -9,5 +9,11 @@ class Sample
   System.out.print("\njava default \"data\" type string");
   System.out.print("\njava supported'oops'\r partially");
   System.out.print("\njava is strongly \\type checked language");
+  System.out.println();
+  System.out.format("welcome to java");
+  int k=100;
+  String name="swetha";
+  float he=171.3f;
+  System.out.format("\nname:%s\nmark=%d\nheight=%f,name,mark,height");
   }
 }
