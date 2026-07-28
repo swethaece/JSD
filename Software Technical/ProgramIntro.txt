@@ -102,3 +102,19 @@ LOOPING or ITERATOR
                 s.o.p(i);
             }
             O/P : 5 8 11 14
+
+Reverse for loop:
+-----------------
+        for(int i-10; i>=1; i--)
+        {
+                System.out.println(i);
+        }
+        Output: 10 9 8 7 6 5 4 3 2 1
+
+task:
+    Enter your name : Abinaya
+    output : Aiaa (4)
+
+prerequest:
+        name.charAt();
+        name.length();
