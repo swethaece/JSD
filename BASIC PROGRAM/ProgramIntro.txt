@@ -118,3 +118,15 @@ task:
 prerequest:
         name.charAt();
         name.length();
+
+
+JUMPING STATEMENTS: 
+------------------
+    Definition: move control one statement to another statement
+
+    1)continue : skip the remaining statement
+               : directly move on to the increment position
+    2)break    : terminate or end loop
+
+    Note : continue ----> only work on inside the loop
+         : break    ----> its work on both loops + switch
