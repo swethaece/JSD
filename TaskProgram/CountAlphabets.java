@@ -1,3 +1,16 @@
+/*
+//question:
+1)count alphabets numbers and special chars
+Enter text:
+	karur.123.swetha@gmail.com
+output:
+	alphapets:12
+	numbers : 3
+	special char :2
+
+note :
+	while checking char @ implement break
+ */
 import java.util.Scanner;
 
 public class CountAlphabets {
