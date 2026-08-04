@@ -130,3 +130,15 @@ JUMPING STATEMENTS:
 
     Note : continue ----> only work on inside the loop
          : break    ----> its work on both loops + switch
+
+2)WHILE LOOP:
+-------------
+        Definition:
+                *Unfixed iteration with entry loop.
+                *no need to define the number of iterations
+        SYNTAX:
+                initial;
+                while(condition){
+                statement;
+                increment/decrement;
+                }
