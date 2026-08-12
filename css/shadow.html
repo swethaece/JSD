@@ -1,0 +1,70 @@
+<!--box-shadow : xaxis yaxis blur padding color-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shadow And Animation css</title>
+    <style type="text/css">
+        div,#img2{
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background-color: brown;
+            border: 10px dotted white;
+            position: relative;
+            animation-name: kalvi;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-duration: 3s;
+            animation-delay: 0s;
+            animation-direction: alternate;
+        }
+        @keyframes kalvi {
+            from{
+                left:0px; top: 0px;
+            }
+            to{
+                left: 1000px;
+                transform: rotate(360deg);
+            }
+            /*extra animation */
+            0%{
+                left:0px;top:0px;
+            }
+            40%{
+                left:500px;
+                top:200px;
+                transform: rotateY(360deg);
+            }
+            70%{
+                left:1000px;
+                top:100px;
+                transform: rotate(100deg);
+            }
+            100%{
+                left:1500px;
+                top:100px;
+                transform: rotate(360deg);
+            }
+        }
+        #img1{
+            width: 300px;
+            height: auto;
+            box-shadow: 10px 10px 30px 5px black;
+       } 
+
+    </style>
+</head>
+<body>
+    <img id="img1" src="./images/natural.jpg"><br>
+    <br>
+    
+    <div>
+
+    </div>
+    
+    <img src="./images/nature1.jpg" id="img2">
+   
+</body>
+</html>

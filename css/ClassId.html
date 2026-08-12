@@ -1,0 +1,66 @@
+<!--IF i have give class and id same time "ID" get 1st priority-->
+<!--If i have give style,claas id same time "STYLE" get 1st priority-->
+<!--3 tags put same style grouping the tags using (,) ex:h1,h2{}-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparision of Class And Id css</title>
+    <style type="text/css">
+        .c1{
+            color: aqua;
+        }
+        #head1{
+            color: pink;
+        }
+        h3,h4,h5{
+            color: yellowgreen;
+        }
+        #img1{
+            border-radius: 50px;
+            border: 15px solid black;
+            width: 300px;
+            height: auto;
+        }
+        #img2{
+            border-radius: 20%;
+            width: 300px;
+            height: auto;
+            border: 15px solid black;
+        }
+        #img1:hover{
+            font-size: 55px;
+            border:5px solid green;
+            color: yellow;
+            background-color: green;
+            cursor: pointer;
+
+        }
+        button{
+            font-size: 50px;
+            color: brown;
+            background-color: aquamarine;
+            border-radius: 20px;
+        }
+        button:hover{
+            font-size: 55px;
+            border:5px solid green;
+            color: yellow;
+            background-color: green;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 class="c1" id="head1">This is header 1</h1>
+    <h2 style="color: blue;"  class="c1" id="head1">This is header 1</h2>
+    <h3>this is example</h3>
+    <h4>this is example</h4>
+    <h5>thi is example</h5>
+    <img id="img1" src="./images/butterfly.jpg">
+    <img id="img2" src="./images/sharuna.jpg">
+    <button>Outline BUTTON</button>
+</body>
+</html>
