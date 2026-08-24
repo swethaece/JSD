@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>variable global</title>
+    <script type="text/javascript">
+//var --->global + assign
+    if(true)
+    {
+        var a=10;
+        a++;
+    }
+    a++;
+    document.write("var A global :" +a);
+
+
+//let --->local+assian
+if(true)
+    {
+        let b=10;
+        b++;
+    }
+    b++;
+    document.write("<br>let a local error :" +b);
+
+//const ---->local + can't change
+if(true)
+{
+    const a=10;
+    document.write("const a local :" +a);
+    a++;
+}
+document.write("const a local error:" +a);
+</script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Photo</title>
+    <script type="text/javascript">
+        function images1()
+        {
+
+            document.getElementById("myimg").src="./images/"+event.target.value+".jpg";
+        }
+
+      
+    </script>
+</head>
+<body>
+    <h1><center>Display images/Photo:</center></h1>
+    <label>Select images:</label>
+    <pre>
+          <input type="radio" onchange="images1()" name="img" value="beach"/>BEACH
+          <input type="radio" onchange="images1()" name="img" value="flower">FLOWER
+          <input type="radio" onchange="images1()" name="img" value="mountain">MOUNTAIN
+          <input type="radio" onchange="images1()" name="img" value="sky">SKY
+    </pre> 
+    <br>
+    <center>
+        <img src="" width="40%" id="myimg">
+    </center>
+</body>
+</html>

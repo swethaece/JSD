@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGULAR EXPRESSION</title>
+    <script type="text/javascript">
+        function disc()
+        {
+            var data=document.getElementById("t1").value;
+            var reg=/^[0-9]{10}$/;  //syntax for regular expression
+            if(data.match(reg))
+            alert("Valid");
+        else
+            alert("Invalid Format");
+        }
+    </script>
+</head>
+<body>
+    <h1><center>Regular Expression 1.Phone Number Validation</center></h1>
+    <input type="text" id="t1" placeholder="Enter Phone Number">
+    <br>
+    <input type="button" value="validate" onclick="disc()">
+    <br>
+    <div id="res"></div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGULAR EXPRESSION</title>
+    <script type="text/javascript">
+        function disc()
+        {
+            var data=document.getElementById("t1").value;
+            var reg=/^[A-Z]{4,12}$/;  //syntax for regular expression
+            if(data.match(reg))
+            alert("Valid");
+        else
+            alert("Invalid Format");
+        }
+
+        // ANOTHER EXCERSICE small+caps
+        function dis()
+        {
+            var data=document.getElementById("t2").value;
+            var reg=/^[a-zA-Z]{4,}$/;  //syntax for regular expression
+            if(data.match(reg))
+            alert("Valid");
+        else
+            alert("Invalid Format");
+        }
+
+        // small+caps+digits
+         function display()
+        {
+            var data=document.getElementById("t3").value;
+            var reg=/^[a-zA-Z0-9]+$/;  //use + or {1,} 
+            if(data.match(reg))
+            alert("Valid");
+        else
+            alert("Invalid Format");
+        }
+
+        //special characters
+         function special()
+        {
+            var data=document.getElementById("t4").value;
+            var reg=/^[^a-zA-Z0-9]*$/;  //^it means avoid small+caps+digit,  it will access space also,  *means min:0
+            if(data.match(reg))
+            alert("Valid");
+        else
+            alert("Invalid Format");
+        }
+
+        //first caps and space then small
+         function name1()
+        {
+            var data=document.getElementById("t5").value;
+            var reg=/^[A-Z]{1}[ ]{1}[a-z]+$/; 
+            if(data.match(reg))
+            alert("Valid");
+            else
+            alert("Invalid Format");
+        }
+    </script>
+</head>
+<body>
+    <h1><center>Regular Expression 2.Name Validation(only caps,min:4,max:12)</center></h1>
+    <input type="text" id="t1" placeholder="Enter Your Name">
+    <br>
+    <input type="button" value="validate" onclick="disc()">
+    <br>
+    <div id="res"></div>
+    <br>
+
+    <h1><center>Regular Expression 3.Name Validation(only caps+small,min:4,max:infinite)</center></h1>
+    <input type="text" id="t2" placeholder="Enter Your Name">
+    <br>
+    <input type="button" value="validate" onclick="dis()">
+    <br>
+    <div id="res"></div>
+    <br>
+
+    <h1><center>Regular Expression 4.Name Validation(only caps+small+digits,min:1,max:infinite)</center></h1>
+    <input type="text" id="t3" placeholder="Enter Your Name">
+    <br>
+    <input type="button" value="validate" onclick="display()">
+    <br>
+    <div id="res"></div>
+    <br>
+
+    <h1><center>Regular Expression 5.Only Special Characters(min:0,max:infinite)</center></h1>
+    <input type="text" id="t4" placeholder="Enter Your Name">
+    <br>
+    <input type="button" value="validate" onclick="special()">
+    <br>
+    <div id="res"></div>
+    <br>
+
+    <h1><center>Regular Expression 1.first letter should be caps
+                                   2.second letter should be space
+                                   3.third letter onwards:small +min 1+ max:infinite</center></h1>
+    <input type="text" id="t5" placeholder="Enter Your Name">
+    <br>
+    <input type="button" value="validate" onclick="name1()">
+    <br>
+    <div id="res"></div>
+
+</body>
+</html>

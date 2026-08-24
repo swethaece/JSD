@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Case</title>
+    <script type="text/javascript"> //switch case:if name will give image will get program
+        function show()
+        {
+            var sname=document.getElementById("t1").value;
+            switch(sname)
+            {
+               
+                 case "bird":
+                    document.getElementById("myimg").src="./images/bird.jpg";
+                    break;
+                case "bird2":
+                    document.getElementById("myimg").src="./images/bird2.jpg";
+                    break;
+                case "lotus":
+                    document.getElementById("myimg").src="./images/lotus.jpg";
+                    break;
+                case "pinktree":
+                    document.getElementById("myimg").src="./images/pinktree.avif";
+                    break;
+                default:
+                     document.getElementById("myimg").src="./images/flower.png";
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <input id="t1" type="text" placeholder="Enter Your Name:" onblur="show()"> <!--onblur:not enter and not moving cursor next line click "Tab"-->
+    <br>
+    <img src="" id="myimg" width="60%" align="center">
+</body>
+</html>
