@@ -1,0 +1,401 @@
+/* =========================================================
+   Everyday Tech Tips — Blog Site
+   Shared stylesheet for all pages
+   ========================================================= */
+
+:root {
+  --color-primary: #2563eb;
+  --color-primary-dark: #1d4ed8;
+  --color-accent: #ec4899;
+  --color-text: #1e293b;
+  --color-muted: #64748b;
+  --color-bg: #f8fafc;
+  --color-card: #ffffff;
+  --color-border: #e2e8f0;
+  --max-width: 1100px;
+  --radius: 12px;
+  --shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: var(--radius);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---------- NAVIGATION (sticky on every page) ---------- */
+header.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--color-card);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: var(--shadow);
+}
+
+.nav-wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--color-primary-dark);
+}
+
+.logo span {
+  color: var(--color-accent);
+}
+
+nav.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+}
+
+nav.main-nav a {
+  color: var(--color-text);
+  font-weight: 600;
+  padding: 6px 2px;
+  border-bottom: 2px solid transparent;
+}
+
+nav.main-nav a:hover,
+nav.main-nav a.active {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+  text-decoration: none;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.hero img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.hero-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 40px;
+  background: linear-gradient(90deg, rgba(15,23,42,0.55), rgba(15,23,42,0.1));
+}
+
+.hero-text h1 {
+  color: #fff;
+  font-size: 2.4rem;
+  margin: 0 0 10px;
+}
+
+.hero-text p {
+  color: #f1f5f9;
+  font-size: 1.1rem;
+  max-width: 480px;
+}
+
+/* ---------- PAGE HEADINGS ---------- */
+.page-banner {
+  margin-bottom: 30px;
+}
+
+.page-banner img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+main {
+  padding-bottom: 60px;
+}
+
+h1, h2, h3 {
+  color: var(--color-text);
+}
+
+section {
+  margin-bottom: 48px;
+}
+
+section > h2 {
+  font-size: 1.6rem;
+  border-left: 5px solid var(--color-primary);
+  padding-left: 12px;
+  margin-bottom: 20px;
+}
+
+/* ---------- BLOG CARDS (Home page) ---------- */
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.post-card {
+  background: var(--color-card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.15s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-4px);
+}
+
+.post-card img {
+  border-radius: 0;
+  height: 180px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.post-card .post-body {
+  padding: 18px 20px 22px;
+}
+
+.post-card h3 {
+  margin: 0 0 8px;
+  font-size: 1.15rem;
+}
+
+.post-card p {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+  margin: 0 0 12px;
+}
+
+.tag {
+  display: inline-block;
+  background: #eff6ff;
+  color: var(--color-primary-dark);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+
+/* ---------- ABOUT PAGE ---------- */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.value-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.value-card {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+
+.value-card h3 {
+  margin-top: 0;
+  color: var(--color-primary-dark);
+}
+
+.team-members {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.member-card {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 16px;
+  text-align: center;
+}
+
+.member-card .role {
+  color: var(--color-muted);
+  font-size: 0.85rem;
+}
+
+/* ---------- CONTACT PAGE ---------- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.contact-card {
+  background: var(--color-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px;
+}
+
+.contact-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-card li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.contact-card li:last-child {
+  border-bottom: none;
+}
+
+form.contact-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  margin-top: 16px;
+}
+
+form.contact-form input,
+form.contact-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+form.contact-form button {
+  margin-top: 20px;
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+form.contact-form button:hover {
+  background: var(--color-primary-dark);
+}
+
+.form-status {
+  margin-top: 14px;
+  font-weight: 600;
+}
+
+/* ---------- FOOTER (present on every page) ---------- */
+footer.site-footer {
+  background: #0f172a;
+  color: #cbd5e1;
+  padding: 40px 0 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 28px;
+  margin-bottom: 24px;
+}
+
+.footer-grid h4 {
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.footer-grid ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-grid li {
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+}
+
+.footer-grid a {
+  color: #cbd5e1;
+}
+
+.footer-bottom {
+  border-top: 1px solid #1e293b;
+  padding-top: 16px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 720px) {
+  .about-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  nav.main-nav ul {
+    gap: 16px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.7rem;
+  }
+}
