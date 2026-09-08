@@ -1,0 +1,79 @@
+*Node.js is a single-threaded application, 
+but it can support concurrency via the concept of event and callbacks.
+
+*Every API of Node.js is asynchronous and being single-threaded, 
+they use async function calls to maintain concurrency.
+
+*Node thread keeps an event loop and whenever a task gets completed, 
+it fires the corresponding event which signals the event-listener function 
+to execute.
+
+*callback functions are called when an asynchronous function returns its result
+Node.js has multiple in-built events available through events module and 
+EventEmitter class which are used to bind events and event-listeners
+
+*{!important notes: EventEmitter provides multiple properties like on and emit. 
+on property is used to bind a function with the event and
+emit is used to fire an event.}
+
+
+note:
+=====
+*emit-------> fire event(calling function)
+		like client
+		one or more request send to on properties
+
+*on---------->bind event( called function)
+		like server
+		only one 
+		purpose: send response to client(emit)
+
+how to install event?
+=====================
+
+goto terminal
+set your project folder
+d:/project folder>npm install events
+
+-----------------------------------------------
+// Import events module
+var events = require('events');
+
+// Create an eventEmitter object
+var eventEmitter = new events.EventEmitter();
+
+Following is the syntax to bind an event handler with an event −
+// Bind event and event handler as follows
+eventEmitter.on('eventName', eventHandler);
+
+We can fire an event programmatically as follows −
+// Fire an event
+eventEmitter.emit('eventName');
+--------------------------------------------------
+example
+// Import events module
+var events = require('events');
+
+// Create an eventEmitter object
+var eventEmitter = new events.EventEmitter();
+
+// Create an event handler as follows
+var connectHandler = function connected() {
+   console.log('connection succesful.');
+  
+   // Fire the data_received event 
+   eventEmitter.emit('data_received');
+}
+
+// Bind the connection event with the handler
+eventEmitter.on('connection', connectHandler);
+ 
+// Bind the data_received event with the anonymous function
+eventEmitter.on('data_received', function() {
+   console.log('data received succesfully.');
+});
+
+// Fire the connection event 
+eventEmitter.emit('connection');
+
+console.log("Program Ended.");

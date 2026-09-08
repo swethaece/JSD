@@ -7,16 +7,20 @@ function App() {
   const cityFun=(Event)=>{
     setCity(Event.target.value)
   }
-  const show=()=>{
+  const show=async()=>{
     const apiurl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=0e894eed4bde14d0fd5cfc651beacab6`
-    axios.get(apiurl).then((response)=>{
+    await axios.get(apiurl).then((response)=>{
       setResult(response.data)
       console.log(result)
-
+                                                                                                                                                     
+    }).catch((err)=>{
+      setResult(err.response.data)
+      console.log(err.response.data)
     })
+    }
     //console.log(apiurl)
-  }
-  return (
+  
+return (
     <div>
       <h1><center>Weather Report all over world</center></h1>
       <h1><center>By using entering city name</center></h1>
@@ -25,10 +29,20 @@ function App() {
       <input type="text" value={city} onChange={(e)=>cityFun(e)} name="city" placeholder='Enter city Name'></input>
       <input type="button" value="Find Weather Report" onClick={show}></input>
       <hr size="2" color="grey"></hr>
-    </div>
-  )
-}
-
+       <br></br>
+        
+          {result!==null && result.cod===200 &&<><h3>Country & city: {result.sys.country} & {result.name}</h3></>}
+          {result!==null && result.cod===200 &&<><h3>Main report: {result.weather[0].main}</h3></>}
+          {result!==null && result.cod===200 &&<><h3>Description: {result.weather[0].description}</h3></>}
+          {result!==null && result.cod===200 &&<><h3>Humidity: {result.main.humidity}</h3></>}
+          {result!==null && result.cod===200 &&<><h3>Wind speed: {result.wind.speed}</h3></>}
+          {result!==null && result.cod===200 &&<><h3>Temperature: {result.main.temp}</h3></>}
+          {result!==null && result.cod===200 &&<><h3>Latitude: {result.coord.lat}<br></br>Longitude: {result.coord.lon}</h3></>}
+          {result!==null && result.cod===200 &&<><h3>Sea level: {result.main.sea_level}</h3></>}
+          {result!==null && result.cod==="404" &&<><h3><font color='red' size='5'>Result: {result.message}</font></h3></>}
+        </div>
+        )
+      }
 export default App
 
 /*import React from 'react'
