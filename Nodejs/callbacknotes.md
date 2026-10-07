@@ -12,7 +12,7 @@ two types:
 high number of requests without waiting or no block for any function to return results.
                     
 -content of the file must be parameter)
-                     
+                      
 ex: blocking code:
 ==================
 main.js

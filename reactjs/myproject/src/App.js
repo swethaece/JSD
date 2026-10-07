@@ -1,4 +1,4 @@
-import React from 'react'
+/*import React from 'react'
 import axios from 'axios'
 import { useState } from 'react'
 function App() {
@@ -43,7 +43,7 @@ return (
         </div>
         )
       }
-export default App
+export default App*/
 
 /*import React from 'react'
 export default function App(props) {
